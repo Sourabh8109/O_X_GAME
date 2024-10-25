@@ -1,0 +1,135 @@
+Reset some default styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa; /* Light blue background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Game container styles */
+.game {
+  text-align: center;
+  background-color: #ffffff; /* White background for the game area */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  width: 50vw; /* Half of the viewport width */
+  max-width: 400px; /* Maximum width for the game container */
+}
+
+/* Button styles for squares */
+.square {
+  width: 60px; /* Fixed width for squares */
+  height: 60px; /* Fixed height for squares */
+  background-color: #81d4fa; /* Light blue for squares */
+  border: 2px solid #0288d1; /* Darker blue border */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 24px; /* Font size for X and O */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  margin: 5px; /* Gap between boxes */
+}
+
+/* Hover effect for squares */
+.square:hover {
+  background-color: #4fc3f7; /* Darker blue on hover */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Status message styles */
+.status {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Board row styles */
+.board-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0; /* Space between rows */
+}
+
+/* Game info styles */
+.game-info {
+  margin-top: 20px;
+}
+
+/* Player name input styles */
+.player-name {
+  margin: 10px 0; /* Space around input */
+  padding: 10px;
+  border: 2px solid #0288d1; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Font size for input */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Focus effect for player name input */
+.player-name:focus {
+  border-color: #4fc3f7; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #ffffff; /* White background for modal */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for modal */
+  text-align: center;
+}
+
+/* Button styles for modal */
+.modal button {
+  background-color: #0288d1; /* Dark blue for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect for modal */
+.modal button:hover {
+  background-color: #0277bd; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .square {
+    width: 50px; /* Smaller squares on mobile */
+    height: 50px;
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .status {
+    font-size: 18px; /* Smaller status font size */
+  }
+
+  .player-name {
+    font-size: 16px; /* Smaller font size for input */
+  }
+}
